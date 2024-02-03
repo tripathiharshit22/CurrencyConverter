@@ -20,4 +20,4 @@ function useCurrencyInfo(currency){ //custom hook
     return(data)
 }
 
-export default useCurrencyInfo  ;
+export default useCurrencyInfo;

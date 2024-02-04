@@ -10,11 +10,10 @@ function App() {
   const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0) 
 
-  const currencyInfo = useCurrencyInfo(from) //useCurrencyInfo function me parameter(currency ) tha , aur yha uss currency me kewal from ki value ja skti hai
+  const currencyInfo = useCurrencyInfo(from) 
 
   const options = Object.keys(currencyInfo) 
-  //useCurrencyInfo function me return data ho rha wo { "inr":87.909....}  isko return de rha to isi ko object kh rhe hai aur isi ka key ko use krenge  //drop down menu hai ye
-
+  
   const swap = () => {
     setFrom(to)
     setTo(from)

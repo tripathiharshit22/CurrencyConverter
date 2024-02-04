@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useId } from 'react'
 
 
 function InputBox({
@@ -14,17 +14,20 @@ function InputBox({
   className = "",
 }) {
 
+  // useId is hook for generating unique IDs that can be passed to accessibility attributes 
+  const amountInputId = useId() //it gives unique value IDs
+
 
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
       {/* here in `...` we write css jo user se lenge ${} me */}
 
       <div className="w-1/2">
-        <label className="text-black/40 mb-2 inline-block">
+        <label  htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">
           {label}
         </label>
         <input
-
+          id={amountInputId}
           className="outline-none w-full bg-transparent py-1.5"
           type="number"
           placeholder="Amount"
